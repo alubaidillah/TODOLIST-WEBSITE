@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do What You Want!!!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Form Input Nama dan Jabatan -->
+      <div id="userForm">
+        <h1>Do What You Want!!!</h1>
+        <label for="nameInput">Nama:</label>
+        <input type="text" id="nameInput" placeholder="Masukkan nama Anda" />
+        <label for="positionInput">Jabatan:</label>
+        <input
+          type="text"
+          id="positionInput"
+          placeholder="Masukkan jabatan Anda"
+        />
+        <button onclick="saveUserData()">Simpan</button>
+      </div>
+
+      <!-- Konten Utama (Awalnya Disembunyikan) -->
+      <div id="mainContent" style="display: none">
+        <!-- Profile Section -->
+        <div class="profile">
+          <h1>Do What You Want!!!</h1>
+          <img
+            id="profilePic"
+            src="source/download.jpeg"
+            alt="Profile Picture"
+          />
+          <p><strong>Nama:</strong> <span id="displayName"></span></p>
+          <p><strong>Jabatan:</strong> <span id="displayPosition"></span></p>
+          <button onclick="openEditProfile()">Edit Profile</button>
+          <button class="delete-profile-button" onclick="deleteProfile()">
+            Hapus Profile
+          </button>
+        </div>
+
+        <!-- Form Edit Profile (Awalnya Disembunyikan) -->
+        <div id="editProfileForm" style="display: none">
+          <h2>Edit Profile</h2>
+          <label for="editNameInput">Nama:</label>
+          <input
+            type="text"
+            id="editNameInput"
+            placeholder="Masukkan nama baru"
+          />
+          <label for="editPositionInput">Jabatan:</label>
+          <input
+            type="text"
+            id="editPositionInput"
+            placeholder="Masukkan jabatan baru"
+          />
+          <label for="editProfilePic">Upload Foto:</label>
+          <input
+            type="file"
+            id="editProfilePic"
+            accept="image/*"
+            onchange="handleProfilePicUpload(event)"
+          />
+          <button onclick="saveEditedProfile()">Simpan Perubahan</button>
+          <button onclick="closeEditProfile()">Batal</button>
+        </div>
+
+        <!-- Time Section -->
+        <div class="time">
+          <p id="currentTime"></p>
+        </div>
+
+        <!-- Menu Navigation -->
+        <div class="menu">
+          <button onclick="showTodoList()">To-Do</button>
+          <button onclick="showDoneList()">Done</button>
+        </div>
+
+        <!-- Input Section -->
+        <div class="input-section">
+          <textarea
+            id="taskInput"
+            placeholder="Tulis tugas Anda di sini..."
+          ></textarea>
+          <label for="priorityInput">Prioritas Tugas:</label>
+          <select id="priorityInput">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+          <label for="dateInput">Pilih Tanggal:</label>
+          <input type="date" id="dateInput" />
+          <button class="submit" onclick="addTask()">Submit</button>
+        </div>
+
+        <!-- To-Do List Section -->
+        <div id="todoSection">
+          <h2>To-Do List</h2>
+          <ul id="todoList"></ul>
+        </div>
+
+        <!-- Done List Section -->
+        <div id="doneSection" style="display: none">
+          <h2>Done</h2>
+          <ul id="doneList"></ul>
+        </div>
+
+        <!-- Delete All Button -->
+        <div class="delete-section">
+          <button onclick="deleteAllTasks()">Hapus Semua Tugas</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

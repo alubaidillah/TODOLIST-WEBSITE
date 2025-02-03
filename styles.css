@@ -1,0 +1,285 @@
+/* styles.css */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px 30px; /* Increase padding */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+  margin: 20px;
+}
+
+#userForm,
+#editProfileForm {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+#userForm h1,
+.profile h1,
+#editProfileForm h2 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+#userForm label,
+#editProfileForm label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 16px;
+  color: #34495e;
+}
+
+#userForm input,
+#editProfileForm input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#userForm button,
+#editProfileForm button,
+.profile button {
+  width: 80%;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.input-section button {
+  width: 65%;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 70px;
+}
+
+.menu button {
+  width: 30%;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.delete-section button {
+  width: 70%;
+  padding: 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#userForm button:hover,
+#editProfileForm button:hover,
+.profile button:hover,
+.menu button:hover,
+.input-section button:hover,
+li button:hover,
+.delete-section button:hover {
+  background-color: #2980b9;
+}
+
+.profile,
+.time,
+.menu,
+.input-section,
+.todo-section,
+.done-section,
+.delete-section {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.profile p {
+  margin: 5px 0;
+  color: #7f8c8d;
+}
+
+.profile .delete-profile-button {
+  background-color: #e74c3c;
+}
+
+.profile .delete-profile-button:hover {
+  background-color: #c0392b;
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+#editProfileForm {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#editProfileForm input[type="file"] {
+  margin-top: 10px;
+}
+
+.time {
+  text-align: center;
+  font-size: 18px;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.input-section {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.input-section textarea,
+.input-section select,
+.input-section input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  resize: vertical;
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+li.completed {
+  background-color: #90f5ba;
+  opacity: 0.7;
+}
+
+li .task-details {
+  flex-grow: 1;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+li .task-date {
+  font-size: 12px;
+  color: #95a5a6;
+  margin-top: 5px;
+}
+
+li .priority {
+  margin-left: 10px;
+  margin-right: 40px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 14px;
+  color: #fff;
+}
+
+li .priority.low {
+  background-color: #2ecc71;
+}
+
+li .priority.medium {
+  background-color: #f1c40f;
+}
+
+li .priority.high {
+  background-color: #e74c3c;
+}
+
+li button {
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+li button:hover {
+  background-color: #c0392b;
+}
+
+.delete-section button {
+  width: 70%;
+  padding: 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.delete-section button:hover {
+  background-color: #c0392b;
+}
+
+/* Tanda pada tanggal yang memiliki tugas */
+input[type="date"] {
+  background-color: #fff;
+}
+
+input[type="date"].has-tasks {
+  background-color: #d4edda; /* Warna hijau muda */
+}
