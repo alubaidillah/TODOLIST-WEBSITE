@@ -131,10 +131,9 @@ function loadTasksForDate() {
 
       if (task.completed) {
         li.classList.add("completed");
-        doneList.appendChild(li);
-      } else {
-        todoList.appendChild(li);
+        doneList.appendChild(li.cloneNode(true));
       }
+      todoList.appendChild(li);
     });
   }
 }
